@@ -7,10 +7,19 @@
     </a>
   </h3>
 
-  <p *ngIf="product.description">
+
+  <p *ngIf="product.description else noDesc">
     Description: {{ product.description }}
   </p>
-</div>
+    <ng-template #noDesc><p><i>This product has no description</i></p></ng-template>
+
+<!-- OR:
+  <div *ngIf="product.description then hasDesc else noDesc">
+ </div>
+    <ng-template #hasDesc> <p>Description: {{ product.description }} </p></ng-template>
+    <ng-template #noDesc><p><i>This product has no description</i></p></ng-template>
+  
+</div> -->
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
