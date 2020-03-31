@@ -11,6 +11,7 @@ export class ProductListComponent {
   products = products;
 
   share() {
+    // Change this later. Alert window is not a good UI practice.
     window.alert('The product has been shared!');
   }
 }
