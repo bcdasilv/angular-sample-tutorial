@@ -12,7 +12,11 @@ export class ProductListComponent {
 
   share() {
     // Change this later. Alert window is not a good UI practice.
-    window.alert('The product has been shared!');
+    window.alert('This is inside the share function, product-list component');
+  }
+
+  onNotify(){
+    window.alert('This is inside the onNotify function, product-list component');
   }
 }
 
